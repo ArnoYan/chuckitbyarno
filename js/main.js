@@ -10,7 +10,7 @@ function init() {
 
     console.log(window.location.pathname);
 
-    if (window.location.pathname === '/chuckitbyarno/index.html' || window.location.pathname === '/index.html' || window.location.pathname === '/') {
+    if (window.location.pathname === '/chuckitbyarno/index.html' || window.location.pathname === '/index.html' || window.location.pathname === '/' || window.location.pathname === '/chuckitbyarno/') {
 
         getAllCategories();
 
