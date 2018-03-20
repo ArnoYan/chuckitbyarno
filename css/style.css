@@ -1,0 +1,893 @@
+/*------------------------- Layout styles ------------------------*/
+body {
+    background: url(../images/bg-body.gif);
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+}
+
+#page {
+    background: url(../images/backgroundSheetLong.png) no-repeat center 0;
+    height: auto;
+    width: auto;
+    margin: 0 auto;
+}
+
+p a, h4 a {
+    color: #875316;
+}
+
+/*-------------------------	Header --------------------------*/
+header {
+    font-family: arial, serif;
+    width: 960px;
+    margin: 0 auto;
+    position: relative;
+}
+
+header a#logo {
+    background: none;
+    border: medium none;
+    display: block;
+    height: 252px;
+    margin: 0;
+    width: 347px;
+}
+
+header a#logo img {
+    border: 0;
+    position: relative;
+    z-index: 1;
+    top: 38px;
+    left: 2px;
+    width: 349px;
+    transform: rotate(-12deg);
+    border-radius: 55%;
+    border: solid #92673d;
+}
+
+header ul {
+    padding: 10px 0;
+    margin: 5px 0 0 30px;
+    border: 1px #D5B88E;
+    border-style: dashed none dashed none;
+    list-style: none;
+    width: 300px;
+    float: none !important;
+    overflow: hidden;
+}
+
+header ul li {
+    width: 87px;
+    padding: 0 6px;
+    border: 1px #D5B88E;
+    border-style: none none none dashed;
+    float: left;
+}
+
+header ul li.first {
+    border: 0;
+}
+
+header ul li h2 {
+    background: none;
+    color: #900017;
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    height: auto;
+    margin: 0;
+    text-decoration: none;
+    text-shadow: 0 1px 1px #FFFFFF;
+    width: auto;
+    text-align: left;
+    line-height: 20px;
+}
+
+header ul li span {
+    color: #900017;
+    margin-top: 3px;
+    display: block;
+    font-size: 16px;
+}
+
+header ul#links {
+    position: absolute;
+    right: 55px;
+    top: 100px;
+}
+
+header a {
+    margin: 11px 0 35px 20px;
+    padding: 0;
+    border: 0;
+    background: url(../images/interface.gif) no-repeat 0 -261px;
+    width: 306px;
+    height: 48px;
+    text-shadow: 0 1px 1px #553B22;
+    font-size: 18px;
+    font-family: arial, serif;
+    color: #FFFFFF;
+    font-weight: bold;
+    cursor: pointer;
+    text-decoration: none;
+    display: block;
+    line-height: 45px;
+    text-align: center;
+}
+
+header a#button {
+    position: absolute;
+    right: 55px;
+    top: 185px;
+}
+
+header ul#navigation {
+    border: 0 none;
+    float: none !important;
+    margin: 0;
+    padding: 0;
+    position: absolute;
+    width: auto;
+    right: 10px;
+    top: 18px;
+}
+
+header ul#navigation li {
+    border: 0;
+    width: auto;
+    padding: 0;
+    text-align: center;
+    line-height: 50px;
+    height: 55px;
+}
+
+header ul#navigation li a {
+    background: none;
+    color: #FFFFFF;
+    font-size: 16px;
+    font-weight: normal;
+    height: auto;
+    margin: 0;
+    text-decoration: none;
+    text-shadow: none;
+    width: auto;
+    outline: none;
+}
+
+header ul#navigation li a:hover {
+    color: #c0ab8a;
+}
+
+header ul#navigation li#homePage {
+    width: 77px;
+}
+
+header ul#navigation li#homePage.selected {
+    background: url(../images/navigation.gif) no-repeat;
+    position: relative;
+    z-index: 9;
+}
+
+header ul#navigation li#moviesPage {
+    width: 74px;
+}
+
+header ul#navigation li#moviesPage.selected {
+    background: url(../images/navigation.gif) no-repeat 0 -167px;
+}
+
+header ul#navigation li.selected a {
+    color: #4e311f;
+}
+
+header img {
+    left: 349px;
+    position: absolute;
+    top: 68px;
+    border-radius: 102px;
+}
+
+header #GenQuoteBox {
+    background: url(../images/quoteProjection.png) no-repeat 0;
+    background-size: 20%;
+    background-position: left;
+    width: 915px;
+    height: 190px;
+    margin: 0 auto;
+}
+
+header #GenQuoteBox h1 {
+    color: #DFC185;
+    font-family: arial, serif;
+    font-size: 28px;
+    line-height: 70px;
+    margin: 0;
+    padding-left: 15px;
+    float: left;
+    height: 66px;
+}
+
+header #GenQuoteBox p {
+    color: #dadada;
+    float: left;
+    font-size: 18px;
+    line-height: 70px;
+    margin: 0 0 0 40px;
+    text-shadow: 0 1px 1px #5C0100;
+    height: 66px;
+}
+
+/*-------------------------	Content --------------------------*/
+#content {
+    width: 960px;
+    margin: 0 auto;
+    overflow: hidden;
+    height: auto;
+}
+
+#content div#featured {
+    background: url(../images/biggerInterfaceBg.png) no-repeat -28px 0;
+    height: 310px;
+    padding: 0;
+    float: none;
+    margin-top: 7px;
+    clear: both;
+}
+
+#content #featured h2 {
+    color: #8E0519;
+    font-family: arial, serif;
+    margin: 0;
+    padding: 20px 0 0 30px;
+    text-shadow: 0 1px 1px #FFFFFF;
+    font-size: 29px;
+}
+
+#content #featured ul {
+    margin: 0;
+    padding: 5px 0 0 30px;
+    list-style: none;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    width: auto;
+}
+
+#content #featured ul li {
+    float: left;
+    text-align: center;
+    margin-left: 10px;
+    border: 0;
+    margin-bottom: 5px;
+}
+
+#content #featured ul li a {
+    border: 0 none;
+    color: #271500;
+    display: block;
+    float: none;
+    font-family: arial, serif;
+    font-size: 14px;
+    margin: 0;
+    text-transform: uppercase;
+    text-indent: 0;
+    background: none;
+    width: auto;
+    height: auto;
+}
+
+#content #featured ul li a:hover {
+    background: none;
+}
+
+#content #featured ul li a img {
+    border: 1px solid #f4e5cd !important;
+    float: none;
+}
+
+#content #featured ul li a img:hover {
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+}
+
+#content #featured a img {
+    border: 0 !important;
+    margin-right: 0;
+    float: none;
+}
+
+#content div.featured {
+    background: url(../images/interface.gif) no-repeat -3px 0;
+    height: 191px;
+    padding: 0;
+    float: none;
+    margin-top: 7px;
+    clear: both;
+}
+
+#content .featured h2 {
+    color: #8E0519;
+    font-family: arial, serif;
+    margin: 0;
+    padding: 20px 0 0 30px;
+    text-shadow: 0 1px 1px #FFFFFF;
+    font-size: 29px;
+}
+
+#content .featured ul {
+    margin: 0;
+    padding: 5px 0 0 30px;
+    list-style: none;
+    height: auto;
+    overflow: hidden;
+    float: left;
+    width: auto;
+}
+
+#content .featured ul li.first {
+    margin-left: 0;
+}
+
+#content .featured ul li {
+    float: left;
+    text-align: center;
+    margin-left: 19px;
+    border: 0;
+}
+
+#content .featured ul li a {
+    border: 0 none;
+    color: #271500;
+    display: block;
+    float: none;
+    font-family: arial, serif;
+    font-size: 14px;
+    margin: 0;
+    text-decoration: none;
+    text-indent: 0;
+    background: none;
+    width: auto;
+    height: auto;
+}
+
+#content .featured ul li a:hover {
+    background: none;
+}
+
+#content .featured ul li a img {
+    border: 1px solid #f4e5cd !important;
+    float: none;
+}
+
+#content .featured ul li.last a {
+    color: #ab9675;
+    font-weight: bold;
+    text-shadow: 0 1px 0 #f4e5cd;
+}
+
+#content .featured ul li.last a img {
+    border: 0 !important;
+    padding: 0 0 11px 0;
+}
+
+#content .featured ul li a img:hover {
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+}
+
+#content .featured a {
+    float: left;
+    margin: 18px 0 0 13px;
+    text-decoration: none;
+    padding: 0;
+    border: 0;
+    width: 78px;
+    height: 78px;
+    text-indent: -99999px;
+}
+
+#content .featured a img {
+    border: 0 !important;
+    margin-right: 0;
+    float: none;
+}
+
+#content div.section2 {
+    float: left;
+    margin: 20px 0 0;
+    padding: 0 0 0 25px;
+    width: 455px;
+}
+
+#content div h2 {
+    color: #AE0A25;
+    font-family: arial, serif;
+    font-size: 20px;
+    margin: 0;
+}
+
+#content div.section2 p {
+    color: #875115;
+    font-family: arial, serif;
+    font-size: 14px;
+    font-weight: bold;
+    margin: 10px 0;
+    width: 375px;
+    line-height: 17px;
+}
+
+#content div img {
+    float: left;
+    margin-right: 10px;
+    border: 1px solid #FFFFFE;
+}
+
+#content div h3 {
+    float: left;
+    margin: 0;
+    color: #875115;
+    font-size: 15px;
+    font-weight: normal;
+    font-family: arial, serif;
+}
+
+#content div ul {
+    color: #895315;
+    float: left;
+    margin: 0 0 10px 15px;
+    padding: 0;
+    width: 200px;
+}
+
+#content ul li p {
+    font-size: 14px !important;
+    font-weight: normal !important;
+    margin: 0 !important;
+    width: auto !important;
+    text-align: left;
+}
+
+#content ul li p a {
+    color: #875316;
+    font-weight: normal;
+    text-decoration: underline !important;
+}
+
+#content div div#section2 {
+    float: left;
+    margin: 5px 0 0 10px;
+    padding: 0;
+    width: 145px;
+}
+
+#content div div#section2 ul li img {
+    margin: 0;
+}
+
+#content div div#section2 ul li h4 {
+    float: left;
+    font-family: arial, serif;
+    font-size: 15px;
+    font-weight: bold;
+    margin: 10px 0 0;
+    text-align: left;
+    width: 140px;
+}
+
+#content div div#section2 ul li p {
+    width: 140px;
+    font-size: 14px;
+}
+
+#content div div ul {
+    list-style: none;
+    margin: 0;
+    width: auto;
+}
+
+#content div div ul li {
+    overflow: hidden;
+    margin-bottom: 20px;
+
+}
+
+#content div div ul li h4 {
+    float: left;
+    margin: 0;
+    font-family: arial, serif;
+    font-size: 15px;
+    font-weight: bold;
+    width: 155px;
+    text-align: left;
+}
+
+#content div div ul li h4 a {
+    text-decoration: none;
+}
+
+#content div.section3 {
+    float: left;
+    margin: 20px 0 0;
+    padding: 0 20px;
+    width: 175px;
+    position: relative;
+}
+
+#content div.section3 a {
+    font-family: arial, serif;
+    font-size: 13px;
+    color: #875316;
+    text-decoration: none;
+    font-weight: bold;
+    display: block;
+    margin: 10px 0 0 0;
+}
+
+#content div.section3 form {
+    margin: 20px 0 0 0;
+}
+
+#content div.section3 form h3 {
+    color: #b00923;
+    float: left;
+    font-family: arial, serif;
+    font-size: 15px;
+    font-weight: normal;
+    padding: 0;
+    margin: 0;
+}
+
+#content div.section3 form input {
+    border-color: #BBAD99;
+    border-style: solid none none solid;
+    border-width: 1px;
+    height: auto;
+    padding: 5px 5px 7px;
+    width: 158px;
+    color: #AFAFAF;
+    font-size: 14px;
+    font-style: italic;
+}
+
+#content div.section3 img {
+    border: 0 none;
+    float: none;
+    left: 15px;
+    _left: 11px;
+    margin: 0;
+    position: absolute;
+    top: 239px;
+    *top: 241px;
+    _top: 231px;
+}
+
+/*-------------------------	Content Pages --------------------------*/
+
+/**/
+
+#GenQuotes {
+
+    border: solid #875316 1px;
+    margin-top: 30px;
+    margin-left: 20%;
+    padding: 15px 0px 15px 15px;
+    font-size: 1.2em;
+    color: #875316;
+}
+
+#GenQuoteBox #QuoteCategorie {
+
+    padding-left: 16%;
+    color: #875316;
+
+}
+
+#QuoteCategorie > span {
+
+    color: #875316;
+
+}
+
+#LijstFilms img {
+
+    width: 100%;
+
+}
+
+#content div#movies #LijstFilms li div:nth-of-type(2) {
+
+    height: auto;
+    display: none;
+
+}
+
+/**/
+
+#content div {
+    padding: 0 10px 0 35px;
+    float: left;
+}
+
+#content div h1 {
+    font-family: arial, serif;
+    font-size: 30px;
+    color: #8F0417;
+    font-weight: bold;
+    text-shadow: 0 1px 1px #FFFFFF;
+    margin: 0;
+    padding: 20px 0;
+}
+
+#content div h4 {
+    font-family: arial, serif;
+    font-weight: bold;
+    color: #875316;
+    font-size: 14px;
+    width: 585px;
+    line-height: 20px;
+    margin: 0 0 5px 0;
+}
+
+#content div span {
+    color: #9e805e;
+    font-family: arial, serif;
+    font-style: italic;
+    font-size: 14px;
+}
+
+#content div p {
+    color: #875316;
+    font-size: 15px;
+    font-weight: normal;
+    font-family: arial, serif;
+    margin: 15px 0;
+    line-height: 25px;
+    text-align: justify;
+    width: 585px;
+}
+
+#content div#events {
+    padding: 0 35px;
+    height: 911px;
+}
+
+#content div#events p {
+    width: 585px !important;
+    float: left;
+    margin: 5px 0 0 !important;
+    font-size: 14px !important;
+}
+
+#content div#events ul {
+    list-style: none;
+    margin: 0;
+    width: auto;
+}
+
+#content div#events ul li {
+    margin: 0 0 37px;
+    overflow: hidden;
+    height: 1%;
+}
+
+#content div#events ul li div {
+    width: 268px;
+    height: 213px;
+    background: #dbc6a9;
+    padding: 1px;
+    float: left;
+    margin: 0 20px 0 0;
+}
+
+#content div#events ul li div a img {
+    border: 1px solid #fff;
+    margin: 0;
+}
+
+#content div#events ul li div a img:hover {
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+}
+
+#content div#events ul li h4 {
+    float: left;
+    text-transform: uppercase;
+}
+
+#content div#events ul li h4 a {
+    color: #875316;
+    font-family: arial, serif;
+    font-size: 14px;
+    font-weight: bold;
+    line-height: 20px;
+    margin: 0 0 5px;
+    width: 585px;
+    text-decoration: none;
+}
+
+#content div#movies {
+    float: none;
+    height: 713px;
+    padding: 0 50px;
+}
+
+#content div#movies ul {
+    display: flex;
+    margin: 0;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    width: auto;
+    list-style: none;
+    padding: 15px 0 0;
+}
+
+#content div#movies ul li:nth-of-type(6n), #content div#movies ul li:first-of-type {
+
+    margin: 0;
+
+}
+
+#content div#movies ul li {
+    width: 130px;
+    height: auto;
+    float: left;
+    padding: 10px 10px 5px 10px;
+}
+
+#content div#movies ul li div {
+    float: none;
+    padding: 1px;
+    background: #DBC6A9;
+    width: 147px;
+    height: 213px;
+}
+
+#content div#movies ul li div a img {
+    margin: 0;
+}
+
+#content div#movies ul li div a img:hover {
+    filter: alpha(opacity=80);
+    opacity: 0.8;
+}
+
+#content div#movies h2 {
+    padding: 20px 0 0;
+    text-align: center;
+    font-size: 0;
+}
+
+#content div#movies h2 a {
+    text-decoration: none;
+    color: #875316;
+    font-family: arial, serif;
+    font-weight: bold;
+    font-size: 14px;
+    text-transform: uppercase;
+}
+
+#content div#movies p {
+    margin: 15px 0 10px !important;
+    text-align: justify;
+    width: auto !important;
+    font-size: 14px !important;
+    padding: 0 2px;
+}
+
+#content div#movies span {
+    font-style: normal;
+    color: #875316;
+    margin: 0 30px 0 0;
+}
+
+/*-------------------------	Footer --------------------------*/
+footer {
+    background: url(../images/bg-footer.gif) repeat-x center top;
+    padding: 7px 0 0;
+    overflow: hidden;
+}
+
+footer div {
+    margin: 0 auto;
+    width: 960px;
+    overflow: hidden;
+}
+
+footer div a.logo {
+    display: block;
+    height: 178px;
+    width: 203px;
+    float: left;
+    margin: 0 20px 0 0;
+}
+
+footer div a.logo img {
+    border: 0;
+    width: 200px;
+}
+
+footer div div {
+    width: auto;
+    margin: 0 84px 0 0;
+    float: left;
+    padding-top: 40px;
+}
+
+footer div div p {
+    font-family: arial, serif;
+    font-size: 12px;
+    width: 580px;
+    line-height: 20px;
+    margin: 0;
+    color: #ad8753;
+    text-align: left;
+}
+
+footer div div span {
+    font-family: arial, serif;
+    font-size: 12px;
+    width: 195px;
+    line-height: 20px;
+    margin: 0;
+    color: #ad8753;
+    display: block;
+}
+
+footer div ul.navigation {
+    list-style: none;
+    margin: 0 64px 0 0;
+    padding: 40px 0 0;
+    float: left;
+    width: 153px;
+}
+
+footer div ul.navigation li {
+    float: left;
+    width: 76px;
+    padding: 0 0 10px 0;
+}
+
+footer div ul.navigation li a {
+    color: #ad8753;
+    font-family: arial, serif;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+footer div ul.navigation li a:hover {
+    color: #875115;
+}
+
+footer div ul {
+    list-style: none;
+    margin: 0;
+    padding: 40px 0 0;
+}
+
+footer div ul li {
+    padding: 0 0 10px 0;
+}
+
+footer div ul li a {
+    color: #ad8753;
+    font-family: arial, serif;
+    font-size: 14px;
+    text-decoration: none;
+}
+
+footer div ul li a:hover {
+    color: #875115;
+}
+
+footer div p {
+    text-align: center;
+    font-size: 12px;
+    color: #ad8753;
+    font-family: arial, serif;
+    clear: both;
+    margin: 0 0 47px;
+}
+
+
+
