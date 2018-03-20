@@ -10,11 +10,11 @@ function init() {
 
     console.log(window.location.pathname);
 
-    if (window.location.pathname === '/ChuckIt/index.html') {
+    if (window.location.pathname === '/chuckitbyarno/index.html') {
 
         getAllCategories();
 
-    } else if (window.location.pathname === '/ChuckIt/movie.html') {
+    } else if (window.location.pathname === '/chuckitbyarno/movie.html') {
 
         getChuckMovies();
 
