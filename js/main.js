@@ -64,7 +64,6 @@ function getAllCategories() {
 
     fetch('https://api.chucknorris.io/jokes/categories', {
 
-        cache: 'no cache',
         headers: new Headers({
 
             'Accept': 'application/json'
