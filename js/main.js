@@ -31,7 +31,6 @@ function getChuckRandomJoke(e) {
     e.preventDefault();
     fetch('https://api.chucknorris.io/jokes/random', {
 
-        cache: 'no cache',
         headers: new Headers({
 
             'Accept': 'application/json'
@@ -43,7 +42,7 @@ function getChuckRandomJoke(e) {
 
     }).then(function (json) {
 
-        if (json.url == 'https://api.chucknorris.io/jokes/uqgBYN06SDi9wbQM3A2iKQ') //te lang
+        if (json.url === 'https://api.chucknorris.io/jokes/uqgBYN06SDi9wbQM3A2iKQ') //te lang
         {
             document.getElementById('GenQuotes').innerHTML = json.value.substr(0, json.value.indexOf('.'));
 
