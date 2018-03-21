@@ -10,11 +10,13 @@ function init() {
 
     console.log(window.location.pathname);
 
-    if (window.location.pathname === '/chuckitbyarno/index.html' || window.location.pathname === '/index.html' || window.location.pathname === '/' || window.location.pathname === '/chuckitbyarno/') {
+
+    /*Check the specific page*/
+    if (window.location.pathname === '/chuckitbyarno/index.html' || window.location.pathname === '/index.html' || window.location.pathname === '/' || window.location.pathname === '/chuckitbyarno/' || window.location.pathname === '/chuckitbyarno.github.io/index.html') {
 
         getAllCategories();
 
-    } else if (window.location.pathname === '/chuckitbyarno/movie.html' || window.location.pathname === '/movie.html') {
+    } else if (window.location.pathname === '/chuckitbyarno/movie.html' || window.location.pathname === '/movie.html'|| window.location.pathname === '/chuckitbyarno.github.io/movie.html') {
 
         getChuckMovies();
 
@@ -37,8 +39,11 @@ function getChuckRandomJoke(e) {
 
         })
     }).then(function (response) {
+
         if (response.ok) return response.json();
+
         throw  new Error('Failed to return')
+
 
     }).then(function (json) {
 
@@ -53,7 +58,7 @@ function getChuckRandomJoke(e) {
         }
 
 
-        document.getElementById('QuoteCategorie').innerHTML = '<span>Categorie: </span>' + "Not defined in API";
+        document.getElementById('QuoteCategorie').innerHTML = '<span>Category: </span>' + "Random joke category";
 
     })
 
@@ -110,9 +115,7 @@ function getJokeByCategorie(e) {
 
     let chosenCategorie = e.currentTarget.getAttribute('id');
     fetch('https://api.chucknorris.io/jokes/random?category=' + chosenCategorie, {
-
-        cache: 'no cache',
-        headers: new Headers({
+    headers: new Headers({
 
             'Accept': 'application/json'
 
@@ -125,9 +128,9 @@ function getJokeByCategorie(e) {
 
         document.getElementById('GenQuotes').innerHTML = json.value;
 
-        if (json.category == null) {
+        if (json.category === null) {
 
-            document.getElementById('QuoteCategorie').innerHTML = '<span>Categorie: </span> ' + "Not defined in API";
+            document.getElementById('QuoteCategorie').innerHTML = '<span>Categorie: </span> ' + chosenCategorie;
 
 
         } else {
@@ -140,7 +143,6 @@ function getJokeByCategorie(e) {
     })
 }
 
-
 function getChuckMovies() {
 
 
@@ -148,7 +150,6 @@ function getChuckMovies() {
 
     fetch('https://api.themoviedb.org/3/person/51576/movie_credits?api_key=96eaa07b5e1250edb1f755f50f8e4336&language=en-US', {
 
-        cache: 'no cache',
         headers: new Headers({
 
             'Accept': 'application/json'
