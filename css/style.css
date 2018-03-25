@@ -893,11 +893,115 @@ footer div p {
 
 /*Responsivness*/
 
-*@media screen and (max-width: 768px) {
+@media screen and (max-width: 768px) {
 
 body,#content div#movies h2 a {font-size:0.8rem;}
 
 }
+
+
+/*Popup >Window*/
+
+
+.modal {
+
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0,0,0,0.5); /*laatste is het trasparantie*/
+}
+
+
+#simpleModal.modal .modal-content{
+
+    background-color: #f4f4f4;
+    margin: 25% auto 15px 25%;
+    padding: 20px 20px;
+    width: 50%;
+    box-shadow: 0 5px 8px 0 rgba(0,0,0,0.2),0 7px 20px 0 rgba(0,0,0,0.17);
+
+    /*Extra animation*/
+
+   /* animation-name: modalopen;
+    animation-duration: 1s; /*Can change value for more effect*/
+}
+
+#simpleModal.modal .modal-content #closeBtn{
+
+    float: right;
+    font-size: 30px;
+    padding-top: 0.5%;
+    margin: 0 5px 0 0;
+
+}
+
+#closeBtn:hover, #closeBtn:focus {
+
+    color:#000;
+    text-decoration: none;
+    cursor: pointer;
+
+}
+
+.button{
+
+    background: coral;
+    padding: 1em 2em;
+    color: #fff;
+    border:0;
+
+}
+
+/*Adding keyframes for animation*/
+/*
+@keyframes modalopen {
+    from{opacity:0}
+    to{opacity: 1}
+}
+*/
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*img {*/

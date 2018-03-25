@@ -2,11 +2,24 @@
 
 document.addEventListener('DOMContentLoaded', init);
 
+/*Modal JS start*/
+
+//modalElement
+let modal = document.getElementById('simpleModal');
+//modalButton
+let modalBtn = document.getElementById('modalBtn');
+//closeButton
+let closeBtn = document.getElementById('closeBtn');
+
+
+/*Modal JS end*/
+
+
+
 let allCategories = [];
 let alleFilms = [];
 
 function init() {
-
 
     console.log(window.location.pathname);
 
@@ -16,20 +29,50 @@ function init() {
 
         getAllCategories();
 
+
+
     } else if (window.location.pathname === '/chuckitbyarno/movie.html' || window.location.pathname === '/movie.html'|| window.location.pathname === '/chuckitbyarno.github.io/movie.html') {
 
-        getChuckMovies();
 
+        getChuckMovies();
     }
 
 
     document.getElementById("getNewRandomQuote").addEventListener("click", getChuckRandomJoke);
     //  summeryOnOff();
 
+
+
+    /*Modal Listener start*/
+
+//listen for open click
+    modalBtn.addEventListener('click', getListenersOnAllMovies);
+//listen for close click
+    closeBtn.addEventListener('click', closeModal);
+//listen outside click to close
+    window.addEventListener('click', clickOutside);
+
+    /*Modal Listener end*/
+
+
+}
+
+/*Deze toevoegen ergens om automatisch te doen gebeuren voor enlke film een eigen listener met for lus bij het laden!*/
+function getListenersOnAllMovies() {
+
+    let films = document.querySelectorAll("#LijstFilms li");
+    console.log(films);
+    for (let i = 0; i<films.length;i++){
+
+        films[i].addEventListener('click', openModal);
+
+    }
+    console.log("listeners added!");
+
+
 }
 
 function getChuckRandomJoke(e) {
-    console.log('gelukt!');
     e.preventDefault();
     fetch('https://api.chucknorris.io/jokes/random', {
 
@@ -60,9 +103,7 @@ function getChuckRandomJoke(e) {
 
         document.getElementById('QuoteCategorie').innerHTML = '<span>Category: </span>' + "Random joke category";
 
-    })
-
-
+    });
 }
 
 function getAllCategories() {
@@ -105,7 +146,8 @@ function getAllCategories() {
             lijstVanLinkCategories[i].addEventListener("click", getJokeByCategorie);
         }
 
-    })
+
+    });
 
 
 } //being done at start
@@ -198,11 +240,91 @@ function getChuckMovies() {
         }
 
 
-    })
-
+    });
 
     /*stop*/
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Popup Window*/
+
+
+//Function to open modal
+function openModal(e) {
+e.preventDefault();
+    let SpecificMovie = e.path[3].id;
+
+    for(let i = 0; i<alleFilms.length;i++){
+
+        if(alleFilms[i].Titel === SpecificMovie){
+            document.getElementById('MovieSummery').innerHTML = "<strong>"+alleFilms[i].Titel+"</strong>" + ": " + alleFilms[i].Summery;
+        }
+
+    }
+
+
+
+
+    modal.style.display = 'block';
+
+}
+
+//Function to close modal
+function closeModal(e) {
+    e.preventDefault();
+    modal.style.display = 'none';
+
+}
+
+//Function to close modal if clicked outside of the modal
+function clickOutside(e) {
+    if (e.target == modal) {
+
+        modal.style.display = 'none';
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 /*uitbreiding*/
