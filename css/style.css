@@ -927,7 +927,7 @@ body,#content div#movies h2 a {font-size:0.8rem;}
 
     /*Extra animation*/
 
-   /* animation-name: modalopen;
+    animation-name: modalopen;
     animation-duration: 1s; /*Can change value for more effect*/
 }
 
@@ -958,12 +958,12 @@ body,#content div#movies h2 a {font-size:0.8rem;}
 }
 
 /*Adding keyframes for animation*/
-/*
+
 @keyframes modalopen {
     from{opacity:0}
     to{opacity: 1}
 }
-*/
+
 
 
 

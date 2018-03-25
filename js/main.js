@@ -280,10 +280,16 @@ function getChuckMovies() {
 function openModal(e) {
 e.preventDefault();
 
-    let SpecificMovie = e.path[3].id;
 
+    let SpecificMovie;
 
-
+/*Check for browser command comptability*/
+    try {
+        SpecificMovie = e.path[3].id
+    }
+    catch(err) {
+        SpecificMovie = e.composedPath()[3].id;
+    }
 
     for(let i = 0; i<alleFilms.length;i++){
 
