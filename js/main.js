@@ -279,12 +279,24 @@ function getChuckMovies() {
 //Function to open modal
 function openModal(e) {
 e.preventDefault();
+
     let SpecificMovie = e.path[3].id;
+
+
+
 
     for(let i = 0; i<alleFilms.length;i++){
 
         if(alleFilms[i].Titel === SpecificMovie){
-            document.getElementById('MovieSummery').innerHTML = "<strong>"+alleFilms[i].Titel+"</strong>" + ": " + alleFilms[i].Summery;
+
+            let summery = alleFilms[i].Summery;
+            if (summery.length < 1){ //als het leeg is
+
+                summery = "No summery yet! We are doing our best to get the most recent information for you :)"
+
+            }
+
+            document.getElementById('MovieSummery').innerHTML = "<strong>"+alleFilms[i].Titel+"</strong>" + ": " + summery;
         }
 
     }
