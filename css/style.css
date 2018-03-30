@@ -9,8 +9,8 @@ body {
 
 #page {
     background: url(../images/backgroundSheetLong.png) no-repeat center 0;
-    height: auto;
-    width: auto;
+    height: 4500px;
+    width: 1000px;
     margin: 0 auto;
 }
 

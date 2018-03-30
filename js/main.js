@@ -131,7 +131,7 @@ function getAllCategories() {
         for (let i = 0; i < allCategories.length; i++) {
 
 
-            categorieLijst.innerHTML += '<li id="' + allCategories[i] + '"><a href="#"><img src="images/cats/' + allCategories[i] + '.jpg" alt="' + allCategories[i] + '"' + '</a>'
+            categorieLijst.innerHTML += '<li id="' + allCategories[i] + '"><a href="#"><img src="images/cats/' + allCategories[i] + '.jpg" alt="' + allCategories[i] + '"' + ' /></a>'
                 + '<a href="#">' + allCategories[i] + '</a></li>';
 
 
@@ -283,13 +283,10 @@ e.preventDefault();
 
     let SpecificMovie;
 
-/*Check for browser command comptability*/
-    try {
-        SpecificMovie = e.path[3].id
-    }
-    catch(err) {
-        SpecificMovie = e.composedPath()[3].id;
-    }
+
+        SpecificMovie = e.target.parentNode.parentNode.parentNode.id;
+
+
 
     for(let i = 0; i<alleFilms.length;i++){
 
