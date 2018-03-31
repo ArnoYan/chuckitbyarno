@@ -6,8 +6,6 @@ document.addEventListener('DOMContentLoaded', init);
 
 //modalElement
 let modal = document.getElementById('simpleModal');
-//modalButton
-let modalBtn = document.getElementById('modalBtn');
 //closeButton
 let closeBtn = document.getElementById('closeBtn');
 
@@ -21,7 +19,7 @@ let alleFilms = [];
 
 function init() {
 
-    console.log(window.location.pathname);
+    // console.log(window.location.pathname);
 
 
     /*Check the specific page*/
@@ -35,42 +33,37 @@ function init() {
 
 
         getChuckMovies();
+
+        //  summeryOnOff();
+        document.getElementById("LijstFilms").addEventListener("click",openModal);
+
+
+        /*Modal Listener start*/
+
+//listen for close click
+        closeBtn.addEventListener('click', closeModal);
+//listen outside click to close
+        window.addEventListener('click', clickOutside);
+
+        /*Modal Listener end*/
     }
 
 
     document.getElementById("getNewRandomQuote").addEventListener("click", getChuckRandomJoke);
-    //  summeryOnOff();
 
 
 
-    /*Modal Listener start*/
 
-//listen for open click
-    modalBtn.addEventListener('click', getListenersOnAllMovies);
-//listen for close click
-    closeBtn.addEventListener('click', closeModal);
-//listen outside click to close
-    window.addEventListener('click', clickOutside);
 
-    /*Modal Listener end*/
+
+
+
+
 
 
 }
 
 /*Deze toevoegen ergens om automatisch te doen gebeuren voor enlke film een eigen listener met for lus bij het laden!*/
-function getListenersOnAllMovies() {
-
-    let films = document.querySelectorAll("#LijstFilms li");
-    console.log(films);
-    for (let i = 0; i<films.length;i++){
-
-        films[i].addEventListener('click', openModal);
-
-    }
-    console.log("listeners added!");
-
-
-}
 
 function getChuckRandomJoke(e) {
     e.preventDefault();
@@ -256,23 +249,6 @@ function getChuckMovies() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /*Popup Window*/
 
 
@@ -280,34 +256,41 @@ function getChuckMovies() {
 function openModal(e) {
 e.preventDefault();
 
+//  if (!event.target.matches(‘input’)) return
 
-    let SpecificMovie;
+    if (e.target.parentElement.parentElement.parentElement.matches('li')) { //Check if clicked on the movie or random click
+
+        let SpecificMovie = e.target.parentElement.parentElement.parentElement.id;
 
 
-        SpecificMovie = e.target.parentNode.parentNode.parentNode.id;
+        for (let i = 0; i < alleFilms.length; i++) {
 
+            if (alleFilms[i].Titel === SpecificMovie) {
 
+                let summery = alleFilms[i].Summery;
+                if (summery.length < 1) { //als het leeg is
 
-    for(let i = 0; i<alleFilms.length;i++){
+                    summery = "No summery yet! We are doing our best to get the most recent information for you :)"
 
-        if(alleFilms[i].Titel === SpecificMovie){
+                }
 
-            let summery = alleFilms[i].Summery;
-            if (summery.length < 1){ //als het leeg is
-
-                summery = "No summery yet! We are doing our best to get the most recent information for you :)"
-
+                document.getElementById('MovieSummery').innerHTML = "<strong>" + alleFilms[i].Titel + "</strong>" + ": " + summery;
             }
 
-            document.getElementById('MovieSummery').innerHTML = "<strong>"+alleFilms[i].Titel+"</strong>" + ": " + summery;
+
         }
+    }else
+    {
+        document.getElementById('MovieSummery').innerHTML = "<strong>Please click on the movie to get it's summary</strong>";
+
 
     }
 
 
 
-
     modal.style.display = 'block';
+
+
 
 }
 
@@ -320,7 +303,7 @@ function closeModal(e) {
 
 //Function to close modal if clicked outside of the modal
 function clickOutside(e) {
-    if (e.target == modal) {
+    if (e.target === modal) {
 
         modal.style.display = 'none';
     }
