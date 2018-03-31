@@ -132,7 +132,7 @@ function getAllCategories() {
 
 
         let lijstVanLinkCategories = document.querySelectorAll("#Categories li");
-        console.log(lijstVanLinkCategories);
+        // console.log(lijstVanLinkCategories);
 
         for (let i = 0; i < lijstVanLinkCategories.length; i++) {
 

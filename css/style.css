@@ -16,7 +16,21 @@ body {
 
 p a, h4 a {
     color: #875316;
+
 }
+
+#simpleModal > div.modal-content > h4 {
+
+
+    font-family: arial, serif;
+    font-size: 30px;
+    color: #8F0417;
+    font-weight: bold;
+    text-shadow: 0 1px 1px #FFFFFF;
+    margin: 0;
+    padding: 20px 0;
+}
+
 
 /*-------------------------	Header --------------------------*/
 header {
