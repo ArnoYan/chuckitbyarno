@@ -31,6 +31,12 @@ p a, h4 a {
     padding: 20px 0;
 }
 
+strong {
+
+    font-weight: bold;
+
+}
+
 
 /*-------------------------	Header --------------------------*/
 header {
