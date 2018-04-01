@@ -8,10 +8,15 @@ body {
 }
 
 #page {
-    background: url(../images/backgroundSheetLong.png) no-repeat center 0;
+    background: url(../images/backgroundSheetLong.png);
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 0;
+
     height: 4500px;
     width: 1000px;
     margin: 0 auto;
+    position:relative; /*Om de footer onderaan absoluut te positioneren*/
 }
 
 p a, h4 a {
@@ -122,7 +127,10 @@ header a {
     margin: 11px 0 35px 20px;
     padding: 0;
     border: 0;
-    background: url(../images/interface.gif) no-repeat 0 -261px;
+    background: url(../images/interface.gif);
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    background-position-y: -261px;
     width: 306px;
     height: 48px;
     text-shadow: 0 1px 1px #553B22;
@@ -185,7 +193,8 @@ header ul#navigation li#homePage {
 }
 
 header ul#navigation li#homePage.selected {
-    background: url(../images/navigation.gif) no-repeat;
+    background: url(../images/navigation.gif);
+    background-repeat: no-repeat;
     position: relative;
     z-index: 9;
 }
@@ -195,7 +204,10 @@ header ul#navigation li#moviesPage {
 }
 
 header ul#navigation li#moviesPage.selected {
-    background: url(../images/navigation.gif) no-repeat 0 -167px;
+    background: url(../images/navigation.gif);
+    background-repeat: no-repeat;
+    background-position-x: 0;
+    background-position-y: -167px;
 }
 
 header ul#navigation li.selected a {
@@ -210,9 +222,10 @@ header img {
 }
 
 header #GenQuoteBox {
-    background: url(../images/quoteProjection.png) no-repeat 0;
+    background: url(../images/quoteProjection.png);
+    background-repeat: no-repeat;
     background-size: 20%;
-    background-position: left;
+    background-position-x: left;
     width: 915px;
     height: 190px;
     margin: 0 auto;
@@ -248,7 +261,10 @@ header #GenQuoteBox p {
 }
 
 #content div#featured {
-    background: url(../images/biggerInterfaceBg.png) no-repeat -28px 0;
+    background: url(../images/biggerInterfaceBg.png);
+    background-repeat: no-repeat;
+    background-position-x: -28px;
+    background-position-y: 0;
     height: 310px;
     padding: 0;
     float: none;
@@ -319,7 +335,10 @@ header #GenQuoteBox p {
 }
 
 #content div.featured {
-    background: url(../images/interface.gif) no-repeat -3px 0;
+    background: url(../images/interface.gif);
+    background-repeat: no-repeat;
+    background-position-x: -3px;
+    background-position-y: 0;
     height: 191px;
     padding: 0;
     float: none;
@@ -804,9 +823,16 @@ header #GenQuoteBox p {
 
 /*-------------------------	Footer --------------------------*/
 footer {
-    background: url(../images/bg-footer.gif) repeat-x center top;
+
+    background: url(../images/bg-footer.gif);
+    background-repeat: repeat-x;
+    background-position-x: center;
+    background-position-y: top;
     padding: 7px 0 0;
     overflow: hidden;
+    position: absolute;
+    left: 18px;
+    bottom: 0;
 }
 
 footer div {
